@@ -8,13 +8,15 @@ public class Teste {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Carro carro;
-
+		Moto moto;
+		
 		ArrayList<Automovel> lista= new ArrayList();
 		
 		int resposta;
 		do {
 			System.out.println("Qual o seu Veiculo?");
 			System.out.println("(1) Carro");
+			System.out.println("(2) Moto");
 			System.out.println("(0) Sair");
 			resposta = sc.nextInt();
 
@@ -36,11 +38,35 @@ public class Teste {
 				carro.CO2(ano);
 				lista.add(carro);
 
-			} else if (resposta == 0) {
-				System.out.println("Saindo...");
-			} else {
-				System.out.println("Opção Invalida!!!");
 			}
+			if (resposta == 2) {
+				System.out.println("");
+				System.out.println("Qual o modelo da sua moto?");
+				String modelo = sc.next();
+				System.out.println("Qual o ano da sua moto");
+				int ano = sc.nextInt();
+				System.out.println("Qual o numero da placa da sua moto?");
+				String placa = sc.next();
+				System.out.println("---------------------------------------------------------------");
+				//
+				moto = new Moto();
+				//moto.setTipo(moto);
+				moto.setModelo(modelo);
+				moto.setAno(ano);
+				moto.setPlaca(placa);
+				moto.CO2(ano);
+				lista.add(moto);
+
+			} if (resposta == 0) {
+				System.out.println("Saindo...");
+			} 
+			
+			else if (resposta != 1 && resposta != 2 && resposta != 3) {
+				System.out.println("Opção InvalAAida!!!");
+			}
+			
+			
+			
 
 		} while (resposta != 0);
 		
