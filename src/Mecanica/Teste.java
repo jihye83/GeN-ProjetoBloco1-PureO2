@@ -12,21 +12,37 @@ public class Teste {
 		
 		ArrayList<Automovel> lista= new ArrayList();
 		
-		int resposta;
+		System.out.println("\t\t--------------------------------------");
+		System.out.println("\t\t\tBem vinde ao PureOO!!");
+		System.out.println("\t\t--------------------------------------\n");
+		
+		
+		int resposta = 0;
 		do {
-			System.out.println("Qual o seu Veiculo?");
+			
+		 System.out.println("\nMenu de opções");
+		 System.out.println("(1) Calcular emissão de CO2");
+		 System.out.println("(2) Visualizar lista de veículos armazenados");
+		 System.out.println("(0) Sair");
+		 int j = sc.nextInt();
+			
+			
+		switch (j) {
+		
+		case 1:
+			
+			System.out.println("Qual o seu Veículo?");
 			System.out.println("(1) Carro");
 			System.out.println("(2) Moto");
-			System.out.println("(0) Sair");
 			resposta = sc.nextInt();
 
 			if (resposta == 1) {
 				System.out.println("");
-				System.out.println("Qual o modelo do seu carro?");
+				System.out.println("Insira a marca do seu carro?");
 				String modelo = sc.next();
-				System.out.println("Qual o ano do seu carro?");
+				System.out.println("Insira o ano do seu carro?");
 				int ano = sc.nextInt();
-				System.out.println("Qual o numero da placa do seu carro?");
+				System.out.println("Insira o número da placa do seu carro?");
 				String placa = sc.next();
 				System.out.println("---------------------------------------------------------------");
 				//
@@ -37,60 +53,47 @@ public class Teste {
 				carro.setPlaca(placa);
 				carro.CO2(ano);
 				lista.add(carro);
-
 			}
+			
 			if (resposta == 2) {
-				System.out.println("");
-				System.out.println("Qual o modelo da sua moto?");
+				System.out.println();
+				System.out.println("Insira a marca da sua moto?");
 				String modelo = sc.next();
-				System.out.println("Qual o ano da sua moto");
+				System.out.println("Insira o ano da sua moto");
 				int ano = sc.nextInt();
-				System.out.println("Qual o número da placa da sua moto?");
+				System.out.println("Insira a placa da sua moto?");
 				String placa = sc.next();
 				System.out.println("---------------------------------------------------------------");
-				//
+				
 				moto = new Moto();
-				//moto.setTipo(moto);
-				moto.setModelo(modelo);
+				moto.setTipo(modelo);
 				moto.setAno(ano);
 				moto.setPlaca(placa);
 				moto.CO2(ano);
 				lista.add(moto);
-
-			} if (resposta == 0) {
-				System.out.println("Saindo...");
-			} 
 			
-			else if (resposta != 1 && resposta != 2 && resposta != 3) {
-				System.out.println("Opção Inválida!!!");
 			}
-			
-			
-			
-
-		} while (resposta != 0);
-		
-		int resposta2;
-		do {
-			System.out.println("Você deseja ver a sua lista de veiculos armazenados?");
-			System.out.println("(1) sim");
-			System.out.println("(2) nao");
-			resposta2 = sc.nextInt();
-			switch(resposta2) {
-			case 1:
-				for(Automovel auto: lista) {
-					System.out.println(auto.toString());
-					System.out.println();
-				}
-				break;
-			case 2:
-				System.out.println("Muito obrigada por utilizar o nosso sistema.");
-			default:
-				System.out.println("Opção inválida!!");
-			}	
 				
-		} while (resposta2 != 2);
-
-	}
-
+		
+			case 2:
+			for(Automovel auto: lista) {
+		
+				System.out.println(auto.toString());
+				System.out.println();
+		}
+		break;
+		
+		case 0:
+			System.out.println("Muito obrigada por utilizar o nosso sistema.");
+			System.exit(0);
+		break;	
+		default: 
+			System.out.println("Opção inválida!!");	
+			
+		}	
+		
+		}	while(resposta!=0);
+		
+	
+}
 }
