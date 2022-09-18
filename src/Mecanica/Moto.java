@@ -2,8 +2,8 @@ package Mecanica;
 
 public class Moto extends Automovel {
 	
-	public Moto(String tipo, String modelo, int ano, String placa) {
-		super(tipo, modelo, ano, placa);
+	public Moto(String marca, String modelo, int ano, String placa) {
+		super(marca, modelo, ano, placa);
 	}
 	
 	public Moto () {

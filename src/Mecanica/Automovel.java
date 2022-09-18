@@ -2,7 +2,7 @@ package Mecanica;
 
 public abstract class Automovel {
 
-	private String tipo;
+	private String marca;
 	private String modelo;
 	private int ano;
 	private String placa;
@@ -13,19 +13,19 @@ public abstract class Automovel {
 		
 	}
 	
-	public Automovel(String tipo, String modelo, int ano, String placa) {
-		this.tipo = tipo;
+	public Automovel(String marca, String modelo, int ano, String placa) {
+		this.marca = marca;
 		this.modelo = modelo;
 		this.ano = ano;
 		this.placa = placa;
 	}
 
-	public String getTipo() {
-		return tipo;
+	public String getMarca() {
+		return marca;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 
 	public String getModelo() {
@@ -54,6 +54,6 @@ public abstract class Automovel {
 
 	@Override
 	public String toString() {
-		return "Tipo: " + getTipo() + "Modelo: " + getModelo() + "\nAno: " + getAno() + "\nPlaca: " + getPlaca();
+		return "Marca: " + getMarca() + "\nModelo: " + getModelo() + "\nAno: " + getAno() + "\nPlaca: " + getPlaca();
 	}
 }
