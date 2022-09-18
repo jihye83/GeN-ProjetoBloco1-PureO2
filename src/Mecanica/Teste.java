@@ -45,7 +45,7 @@ public class Teste {
 				String modelo = sc.next();
 				System.out.println("Qual o ano da sua moto");
 				int ano = sc.nextInt();
-				System.out.println("Qual o numero da placa da sua moto?");
+				System.out.println("Qual o número da placa da sua moto?");
 				String placa = sc.next();
 				System.out.println("---------------------------------------------------------------");
 				//
@@ -62,7 +62,7 @@ public class Teste {
 			} 
 			
 			else if (resposta != 1 && resposta != 2 && resposta != 3) {
-				System.out.println("Opção InvalAAida!!!");
+				System.out.println("Opção Inválida!!!");
 			}
 			
 			
@@ -85,8 +85,10 @@ public class Teste {
 				break;
 			case 2:
 				System.out.println("Muito obrigada por utilizar o nosso sistema.");
-			}
-			
+			default:
+				System.out.println("Opção inválida!!");
+			}	
+				
 		} while (resposta2 != 2);
 
 	}
