@@ -2,30 +2,27 @@ package Mecanica;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Teste {
-
 	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
 			Carro carro;
 			Moto moto;
 			
 			ArrayList<Automovel> lista= new ArrayList<Automovel>();
-
 			
-			System.out.println("\t\t--------------------------------------");
-			System.out.println("\t\t\tBem-vinde ao PureOO!!");
-			System.out.println("\t\t--------------------------------------\n");
+			System.out.println("----------------------------------------------------");
+			System.out.println("\t\tBem-vinde ao PureOO!!");
+			System.out.println("----------------------------------------------------\n");
 			
 			
 			int resposta = 0;
 			
 			do {
 			 
-			 System.out.println("\nMenu de opções");
-			 System.out.println("(1) Consultar emissão de CO2 do seu veículo");
-			 System.out.println("(2) Visualizar lista de veículos armazenados");
-			 System.out.println("(0) Sair");
+			 System.out.println("\n\t\tMenu de opções");
+			 System.out.println("\n1 - Consultar emissão de CO2 do seu veículo");
+			 System.out.println("2 - Visualizar lista de veículos armazenados");
+			 System.out.println("0 - Sair");
 			 
 			 int j = sc.nextInt();	
 				
@@ -33,11 +30,10 @@ public class Teste {
 			
 			case 1:
 				
-				System.out.println("Qual o seu Veículo?");
-				System.out.println("(1) Carro");
-				System.out.println("(2) Moto");
+				System.out.println("\nQual o seu Veículo?");
+				System.out.println("1 - Carro");
+				System.out.println("2 - Moto");
 				resposta = sc.nextInt();
-
 				if (resposta == 1) {
 					System.out.println("");
 					System.out.println("Qual a marca do seu carro?");
@@ -48,7 +44,7 @@ public class Teste {
 					int ano = sc.nextInt();
 					System.out.println("Qual o número da placa do seu carro? (ABC-1234 OU ABC1D23)");
 					String placa = sc.next();
-					System.out.println("---------------------------------------------------------------");
+					System.out.println("\n---------------------------------------------------------------");
 					
 					carro = new Carro();
 					carro.setMarca(marca);
@@ -57,6 +53,7 @@ public class Teste {
 					carro.setPlaca(placa);
 					carro.CO2(ano);
 					lista.add(carro);
+				break;
 				}
 				
 				if (resposta == 2) {
@@ -78,29 +75,34 @@ public class Teste {
 					moto.setPlaca(placa);
 					moto.CO2(ano);
 					lista.add(moto);
-				
+				break;
 				}
 					
 			
 			case 2:
 				if(lista.size() ==0) {
-					System.out.println("Não há nenhum veículo armazenado!"); 
+					System.out.println("----------------------------------------------------");
+					System.out.println("\tNão há nenhum veículo armazenado!"); 
+					System.out.println("----------------------------------------------------");
+
 					resposta = 1 ;}
-					// precisa inserir aqui um meio de recomeçar o programa e aí vai estar redondinho
 				for(Automovel auto: lista) {
 						System.out.println(auto.toString());
 						System.out.println();
 				}
-			break;
-			
+				break;
+
 			case 0:
-				System.out.println("Muito obrigada por utilizar o nosso sistema.");
+				System.out.println("----------------------------------------------------");
+				System.out.println("   Muito obrigada por utilizar o nosso sistema.");
+				System.out.println("----------------------------------------------------");
 				System.exit(0);
 			break;
 			
 			default: 
+				System.out.println("----------------------------------------------------");
 				System.out.println("Opção inválida!!");	
-				
+				System.out.println("----------------------------------------------------");
 			}	
 			
 			}	while(resposta!=0);

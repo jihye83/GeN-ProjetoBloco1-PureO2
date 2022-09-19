@@ -1,10 +1,8 @@
-package Mecanica;
 
 public abstract class Automovel {
 
 	private String marca;
 	private String modelo;
-	private int ano;
 	private String placa;
 
 	public abstract void CO2(int ano);

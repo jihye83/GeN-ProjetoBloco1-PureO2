@@ -1,4 +1,3 @@
-package Mecanica;
 
 public class Moto extends Automovel {
 	

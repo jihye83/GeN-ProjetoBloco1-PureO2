@@ -1,8 +1,6 @@
-package Mecanica;
 
 public class Carro extends Automovel {
 
-	public Carro(String marca, String modelo, int ano, String placa) {
 		super(marca, modelo, ano, placa);
 	}
 	
