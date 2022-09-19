@@ -85,11 +85,11 @@ public class Teste {
 			case 2:
 				if(lista.size() ==0) {
 					System.out.println("Não há nenhum veículo armazenado!"); 
+					resposta = 1 ;}
 					// precisa inserir aqui um meio de recomeçar o programa e aí vai estar redondinho
 				for(Automovel auto: lista) {
 						System.out.println(auto.toString());
 						System.out.println();
-				}
 				}
 			break;
 			
