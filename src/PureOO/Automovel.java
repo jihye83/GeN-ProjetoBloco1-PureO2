@@ -1,16 +1,17 @@
+package PureOO;
 
 public abstract class Automovel {
-
+	//atributos
 	private String marca;
 	private String modelo;
+	private int ano;
 	private String placa;
-
+	//metodo emitir Co2
 	public abstract void CO2(int ano);
-
+	//construtor vazio
 	public Automovel() {
-		
 	}
-	
+
 	public Automovel(String marca, String modelo, int ano, String placa) {
 		this.marca = marca;
 		this.modelo = modelo;

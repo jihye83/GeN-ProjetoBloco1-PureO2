@@ -1,13 +1,14 @@
+package PureOO;
 
 public class Moto extends Automovel {
-	
+
 	public Moto(String marca, String modelo, int ano, String placa) {
 		super(marca, modelo, ano, placa);
 	}
-	
-	public Moto () {
+
+	public Moto() {
 	}
-	
+
 	@Override
 	public void CO2(int ano) {
 

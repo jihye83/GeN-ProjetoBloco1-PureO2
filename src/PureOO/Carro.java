@@ -1,9 +1,11 @@
+package PureOO;
 
 public class Carro extends Automovel {
 
+	public Carro(String marca, String modelo, int ano, String placa) {
 		super(marca, modelo, ano, placa);
 	}
-	
+
 	public Carro() {
 	}
 
@@ -49,6 +51,5 @@ public class Carro extends Automovel {
 			System.out.println("\n Coloque ano de 1940 até hoje.");
 		}
 	}
-	
-	
+
 }
