@@ -49,10 +49,8 @@ public class Teste {
 					carro.setPlaca(placa);
 					carro.CO2(ano);
 					lista.add(carro);
-					break;
-				}
 
-				if (resposta == 2) {
+				} else if (resposta == 2) {
 					System.out.println();
 					System.out.println("Qual a marca da sua moto?");
 					String marca = sc.next();
@@ -71,15 +69,16 @@ public class Teste {
 					moto.setPlaca(placa);
 					moto.CO2(ano);
 					lista.add(moto);
-					break;
+				} else {
+					System.out.println("Opção Invalida!!!");
 				}
-
+				break;
+				
 			case 2:
 				if (lista.size() == 0) {
 					System.out.println("----------------------------------------------------");
 					System.out.println("\tNão há nenhum veículo armazenado!");
 					System.out.println("----------------------------------------------------");
-
 					resposta = 1;
 				}
 				for (Automovel auto : lista) {
