@@ -13,3 +13,6 @@ Sendo assim o nosso programa irá mostrar a quantidade de **CO2** que o veículo
     Ji Hye Koo
     Julia Gali
     Juliana Nonaka.
+
+<h3>📒 Técnicas usadas: <h3>
+
