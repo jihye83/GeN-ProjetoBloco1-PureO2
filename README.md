@@ -1,4 +1,4 @@
-# ProjetoJava
+# GeN-Projeto
 <h1 align="center"> ✏Bloco 1 - Sistema Pure O2 </h1>
 
 "O **nosso projeto** tem como objetivo conscientizar as pessoas do quanto a emissão de **CO2** do seu veículo está emitindo. 
